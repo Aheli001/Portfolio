@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aheli - Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/70d4baf1b4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="leftSide">
+          <h1>Aheli<span class="purple">.portfolio</span></h1>
+        </div>
+        <div class="rightSide">
+          <ul id="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#techStack">Tech Stack</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+            <li>
+              <a href="images/AHELI NANDY_Resume.pdf" download class="btn"
+                >Download CV</a
+              >
+            </li>
+            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- home tab  -->
+      <section class="homeSection" id="home">
+        <div class="home-leftSection">
+          Hi, My name is <span class="violet">Aheli Nandy</span>.
+          <span id="element"> </span>
+        </div>
+        <div class="home-rightSection">
+          <img src="images/main.jpeg" alt="main.jpg" />
+        </div>
+      </section>
+      <hr />
+      <!-- about tab  -->
+      <section class="aboutSection" id="about">
+        <div class="about-leftSection">
+          <img src="images/main.jpeg" alt="about.jpg" />
+        </div>
+        <div class="about-rightSection">
+          <h1>About Me</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+            quia aperiam molestiae iure asperiores corporis quod blanditiis
+            omnis rerum natus tempora laborum modi, porro distinctio eius. Et
+            omnis ratione, magni sint, perferendis fuga nobis nihil corporis
+            repudiandae voluptates ea eum quidem! Necessitatibus soluta vel
+            autem sit praesentium fugiat ut corporis?
+          </p>
+        </div>
+      </section>
+      <hr />
+      <!-- tech stack tab  -->
+      <section class="techStackSection" id="techStack">
+        <h1>Tech Stack</h1>
+        <div class="color-gray">
+          Technologies I've been working with recently
+        </div>
+        <div class="imageOfTechStack">
+          <img src="images/html.jpg" alt="html" />
+          <img src="images/css.jpg" alt="css" />
+          <img src="images/js.jpg" alt="js" />
+          <img src="images/bootstrap.jpg" alt="bootstrap" />
+          <img src="images/react.jpg" alt="react" />
+          <img src="images/tailwind.jpg" alt="tailwind" />
+          <img src="images/git.jpg" alt="git" />
+          <img src="images/github.jpg" alt="github" />
+          <img src="images/vscode-icons_file-type-vscode.jpg" alt="vscode" />
+        </div>
+      </section>
+      <hr />
+      <!-- projects section  -->
+      <section class="projects-section" id="projects">
+        <h1>Projects</h1>
+        <div class="color-gray">Projects that I've completed.</div>
+        <div class="projects-container">
+          <div class="projects">
+            <h2>Project 1</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum nulla deserunt nisi similique totam saepe veniam? Harum
+              illo voluptatum ab.
+            </p>
+            <i class="fa-brands fa-github"></i>
+            <a href="#">View Code</a>
+          </div>
+          <div class="projects">
+            <h2>Project 2</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum nulla deserunt nisi similique totam saepe veniam? Harum
+              illo voluptatum ab.
+            </p>
+            <i class="fa-brands fa-github"></i>
+            <a href="#">View Code</a>
+          </div>
+          <div class="projects">
+            <h2>Project 3</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum nulla deserunt nisi similique totam saepe veniam? Harum
+              illo voluptatum ab.
+            </p>
+            <i class="fa-brands fa-github"></i>
+            <a href="#">View Code</a>
+          </div>
+          <div class="projects">
+            <h2>Project 4</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum nulla deserunt nisi similique totam saepe veniam? Harum
+              illo voluptatum ab.
+            </p>
+            <i class="fa-brands fa-github"></i>
+            <a href="#">View Code</a>
+          </div>
+          <div class="projects">
+            <h2>Project 5</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum nulla deserunt nisi similique totam saepe veniam? Harum
+              illo voluptatum ab.
+            </p>
+            <i class="fa-brands fa-github"></i>
+            <a href="#">View Code</a>
+          </div>
+          <div class="projects">
+            <h2>Project 6</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum nulla deserunt nisi similique totam saepe veniam? Harum
+              illo voluptatum ab.
+            </p>
+            <i class="fa-brands fa-github"></i>
+            <a href="#">View Code</a>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <!-- contact section  -->
+      <section class="contact-section" id="contact">
+        <div class="contact-leftSection">
+          <h1>Contact Me</h1>
+          <a href=""
+            ><i class="fa-regular fa-envelope"></i>aheinandy01@gmail.com</a
+          >
+          <a href=""><i class="fa-solid fa-phone"></i>+91-8697657720</a>
+          <div class="contact-icons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="contact-rightSection">
+          <form>
+            <input
+              type="text"
+              name="Name"
+              placeholder="Your full name"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your mail id"
+              required
+            />
+            <textarea
+              name="Message"
+              rows="6"
+              placeholder="Your Message"
+            ></textarea>
+            <button type="submit" class="btn btn2">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>Copyright @Aheli Nandy</div>
+      <div>
+        Last updated 8th May 2024<i class="fa-regular fa-face-smile-beam"></i>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed('#element', {
+        strings: [
+          'I am a Web Developer. Scroll below to find my recent works.',
+        ],
+        typeSpeed: 50,
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
