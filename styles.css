@@ -221,37 +221,46 @@ main hr{
     align-items: center;
 }
 .contact-leftSection{
-    width: 35%;
+    flex-basis: 35%;
 }
 
-.contact-leftSection a{
-    text-decoration: none;
-    display: block;
-    margin: 30px 0;
+.contact-leftSection p{
+    margin-top: 30px;
     color: var(--purple);
+    transition: transform 0.5s;
+    cursor: pointer;
 }
-.contact-leftSection a i{
+.contact-leftSection p i{
     margin-right: 15px;
     font-size: 1.2rem;
     color: var(--violet);
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.contact-leftSection p:hover {
+    transform: translateY(-5px);
 }
 .contact-icons {
     margin-top: 30px;
 }
 .contact-icons a{
-    display: inline;
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    display: inline-block;
 }
 .contact-icons a i{
     font-size: 1.75rem;
     transition: transform 0.5s;
     color: var(--purple);
 }
-.contact-icons a i:hover{
+.contact-icons a:hover{
     color: var(--violet);
     transform: translateY(-5px);
 }
 .contact-rightSection{
-    width: 65%;
+    flex-basis: 65%;
 }
 .contact-rightSection form{
     width: 100%;
@@ -270,6 +279,7 @@ form input, form textarea{
 }
 form .btn2{
     padding: 14px 60px;
+    width: 100%;
 }
 
 /* footer section  */
@@ -296,7 +306,7 @@ nav .fa-solid{
         background: var(--bgcolor1);
         position: fixed;
         top: 0;
-        right: 0;
+        right: -200px;
         width: 200px;
         height: 100vh;
         padding-top: 50px;
@@ -325,8 +335,8 @@ nav .fa-solid{
         min-height: 100vh;
         text-align: center;
     }
-    .home-leftSection, .home-rightSection{
-        flex-basis: 100%;
+    .home-rightSection{
+        display: none;
     }
     .home-leftSection {
         margin: 0 auto;
@@ -343,9 +353,6 @@ nav .fa-solid{
     }
     .color-gray {
         font-size: 0.78rem;
-    }
-    .aboutSection .about-rightSection h1{
-        margin-bottom: -16px;
     }
     .about-leftSection,.about-rightSection{
         flex-basis: 100%;
@@ -381,11 +388,5 @@ nav .fa-solid{
     }
     .contact-leftSection, .contact-rightSection{
         flex-basis: 100%;
-    }
-    .contact-rightSection form{
-        margin-right: 30px;
-    }
-    .contact-rightSection form .btn2{
-        margin: 20px 34px;
     }
 }
