@@ -286,7 +286,7 @@ footer{
     width: 100%;
     text-align: center;
     padding: 10px 0;
-    background-color: var(--purple);
+    background: linear-gradient(180deg, #c6426e 0%, #533a71 68.57%);
     color: var(--bgcolor);
     font-weight: 300;
 }
