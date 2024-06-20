@@ -119,6 +119,7 @@ h1{
     font-weight: 600;
     transition: 0.5s ease;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .btn:hover{

@@ -29,10 +29,10 @@
         Hi, My name is <span class="violet">Aheli Nandy</span>.
         <span id="element"> </span>
         <div class="social-icons">
-          <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href=""><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/aheli-nandy/"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/Aheli001"><i class="fa-brands fa-github"></i></a>
         </div>
-        <a href="" class="btn">My Resume</a>
+        <a href="images/AHELI NANDY_Resume.pdf" class="btn">My Resume</a>
       </div>
       <div class="home-rightSection">
         <img src="images/main.jpeg" alt="main.jpg" />
@@ -111,18 +111,19 @@
     <hr />
     <!-- contact section  -->
     <section class="contact" id="contact">
-      <h1>Contact Me</h1>
-      <form action="">
+      <h1>Get in Touch</h1>
+      <form action="#">
         <div class="input-box">
-          <input type="text" placeholder="Full Name" required>
-          <input type="email" placeholder="Email Address" required>
+          <input type="text" id="name" name="Full Name" placeholder="Full Name" required>
+          <input type="email" id="email" name="Email Address" placeholder="Email Address" required>
         </div>
         <div class="input-box">
-          <input type="number" placeholder="Mobile Number">
-          <input type="text" placeholder="Email Subject">
+          <input type="number" id="phone" name="Mobile Number" placeholder="Mobile Number">
+          <input type="text" id="emailSub" name="Email Subject" placeholder="Email Subject">
         </div>
-        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-        <input type="submit" value="Send Message" class="btn btn2">
+        <textarea name="" id="yourMessage" cols="30" rows="10" name="Your Message" placeholder="Your Message"></textarea>
+        <!-- <input type="submit" value="Send Message" class="btn btn2"> -->
+        <button type="submit" class="btn btn2">Send Message</button>
       </form>
     </section>
   </main>
@@ -140,6 +141,10 @@
     });
   </script>
   <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+  <script src="Email.js"></script>
   <script src="script.js"></script>
 </body>
 
