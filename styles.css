@@ -109,11 +109,11 @@ h1{
 
 .btn{
     display: inline-block;
-    padding: 1rem;
+    padding: 0.5rem;
     background: var(--violet);
-    border-radius: 3rem;
+    border-radius: 2rem;
     box-shadow: 0 0 0.75rem var(--violet);
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: var(--bgcolor);
     letter-spacing: 0.1rem;
     font-weight: 600;
@@ -152,31 +152,33 @@ main hr{
 .aboutSection{
     display: flex;
     justify-content: space-around;
-}
-.aboutSection .about-leftSection{
-    width: 35%;
-}
-.aboutSection .about-leftSection img{
-    width: 100%;
-    border-radius: 15%;
+    align-items: center;
 }
 
-.aboutSection .about-rightSection{
+
+.about-leftSection img{
+    width: 25vw;
+    mix-blend-mode: multiply;
+    border-radius: 50%;
+    animation: floatImage 4s ease-in-out infinite;
+}
+
+.about-rightSection{
     width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.aboutSection .about-rightSection p{
+.about-rightSection p{
     text-align: justify;
     font-size: 1.15rem;
-    margin: 30px 65px 0 0;
 }
 
 /* tech stack section  */
 .techStackSection .imageOfTechStack{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: 20px 0;
@@ -302,6 +304,7 @@ main hr{
 
 .btn2{
     border: none;
+    width: 50%;
 }
 
 /* footer section  */
@@ -318,102 +321,6 @@ footer div i{
 }
 /* responsive design  */
 
-/* nav .fa-solid{
-    display: none;
-}
-@media only screen and (max-width: 600px) {
-    nav ul{
-        color: var(--purple);
-        display: block;
-        background: var(--bgcolor1);
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 1;
-        transition: right 0.5s;
-    }
-    nav ul li{
-        margin: 25px;
-    }
-    nav ul .fa-solid{
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
-    }
-    nav .fa-solid{
-        display: block;
-        font-size: 1.5rem;
-        margin-right: 23px;
-    }
-    nav .leftSide{
-        margin-left: 30px;
-    }
-    .homeSection, .aboutSection{
-        flex-wrap: wrap;
-        min-height: 100vh;
-        text-align: center;
-    }
-    .home-rightSection{
-        display: none;
-    }
-    .home-leftSection {
-        margin: 0 auto;
-        font-size: 1.25rem;
-    }
-    .aboutSection .about-rightSection p {
-        margin-right: 0;
-        text-align: center;
-        font-size: 1rem;
-    }
-    h1{
-        text-align: center;
-        font-size: 1.04rem;
-    }
-    .color-gray {
-        font-size: 0.78rem;
-    }
-    .about-leftSection,.about-rightSection{
-        flex-basis: 100%;
-    }
-    .aboutSection .about-rightSection{
-        margin: 25px;
-    }
-    .projects-section{
-        margin: 45px 50px;
-    }
-    .projects-section h1, .projects-section div{
-        text-align: center;
-    }
-    .techStackSection h1, .techStackSection div{
-        text-align: center;
-    }
-    .techStackSection{
-        margin: 50px 35px;
-    }
-    .imageOfTechStack{
-        flex-wrap: wrap;
-    }
-    .techStackSection .imageOfTechStack img {
-        height: 45px;
-        width: 44px;
-        margin: 6px 12px;
-    }
-    .projects-section .projects-container .projects{
-        font-size: 0.85rem;
-    }
-    .contact-section{
-        flex-wrap: wrap;
-    }
-    .contact-leftSection, .contact-rightSection{
-        flex-basis: 100%;
-    }
-} */
-
-
 @media (max-width: 1200px){
     html{
         font-size: 55%;
@@ -425,10 +332,7 @@ footer div i{
         padding: 2rem 3%;
     }
     section{
-        padding: 10rem 3%;
-    }
-    .techStackSection{
-        padding: 7rem;
+        padding: 2rem 3%;
     }
     .projects-section{
         padding-bottom: 7rem;
@@ -441,6 +345,62 @@ footer div i{
     }
 }
 
-/* @media (max-width: 768px){
-    menu
-} */
+@media (max-width: 768px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        left:0;
+        top:100%;
+        width: 100%;
+        padding: 0.5rem 8%;
+        background: var(--bgcolor1);
+        display: none;
+    }
+
+    .active{
+        display: block;
+    }
+
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .homeSection{
+        flex-direction: column;
+    }
+    .home-leftSection{
+        font-size: 1.5rem;
+        order: 2;
+    }
+    .home-rightSection img{
+        width: 53vw;
+    }
+    .aboutSection{
+        flex-direction: column;
+    }
+    .about-leftSection img{
+        width: 53vw;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+    .color-gray {
+        font-size: 1.7rem;
+    }
+    .about-rightSection p {
+        font-size: 1.5rem;
+    }
+    .projects-container{
+        grid-template-columns: 1fr;
+    }
+    .projects-container .project-box {
+        min-height: 30rem;
+    }
+    .contact form .input-box input{
+        width: 100%;
+    }
+}
