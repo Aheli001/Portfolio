@@ -19,68 +19,41 @@ body{
     font-family: "Poppins", sans-serif;
 }
 
-/* navbar section*/
-nav{
+section{
+    margin: 50px 120px;
+}
+
+/* header section*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
-    background-color: var(--bgcolor);
-    
+    z-index: 100;
+    background-color: var(--bgcolor1);
 }
-nav ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-nav ul li{
-    list-style: none;
-    margin: 20px;
-}
-nav ul li a{
+
+.navbar a{
+    font-size: 1.25rem;
+    color: var(--purple);
     text-decoration: none;
-    color: var(--purple);
-    font-size: 1rem;
-    transition: font-size 0.5s, transform 0.5s;
+    margin-left: 1rem;
 }
-nav ul li a:hover{
-    transform: translateY(-10px);
+
+.navbar a:hover,
+.navbar a:active{
     color: var(--violet);
-    font-size: 1.12rem;
-    cursor: pointer;
 }
 
-.btn{
-    padding: 2px 7px;
-    border: 2px solid var(--violet);
-    background-color: var(--bgcolor);
+#menu-icon{
+    font-size: 3.6rem;
     color: var(--purple);
-    border-radius: 2.4rem;
-    font-size: 1rem;
-    transition: transform 0.5s;
-}
+    display: none;
 
-.btn:hover{
-    transform: translateY(-10px);
-    cursor: pointer;
-    background-color: var(--violet);
-    color: var(--bgcolor);
-    font-size: 1.12rem;
-}
-
-
-/* designing logo */
-.leftSide{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 70px;
-}
-
-.leftSide h1{
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: var(--violet);
 }
 
 
@@ -96,16 +69,63 @@ h1{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 50px 120px;
 }
 .home-rightSection{
-    width: 50%;
+    margin-top: 5rem;
 }
 .home-rightSection img{
-    width: 100%;
-    border-radius: 40%;
+    width: 25vw;
     mix-blend-mode: multiply;
+    border-radius: 50%;
+    animation: floatImage 4s ease-in-out infinite;
 }
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    color: var(--purple);
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.social-icons a:hover{
+    color: var(--violet);
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem;
+    background: var(--violet);
+    border-radius: 3rem;
+    box-shadow: 0 0 0.75rem var(--violet);
+    font-size: 1.25rem;
+    color: var(--bgcolor);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.5s ease;
+    text-decoration: none;
+}
+
+.btn:hover{
+    box-shadow: none;
+}
+
+
 .home-leftSection{
     width: 50%;
     font-size: 2rem;
@@ -132,7 +152,6 @@ main hr{
 .aboutSection{
     display: flex;
     justify-content: space-around;
-    margin: 50px 120px;
 }
 .aboutSection .about-leftSection{
     width: 35%;
@@ -144,6 +163,9 @@ main hr{
 
 .aboutSection .about-rightSection{
     width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .aboutSection .about-rightSection p{
@@ -153,10 +175,6 @@ main hr{
 }
 
 /* tech stack section  */
-.techStackSection{
-    margin: 50px 120px;
-}
-
 .techStackSection .imageOfTechStack{
     display: flex;
     justify-content: space-between;
@@ -171,114 +189,119 @@ main hr{
 }
 
 /* projects section  */
-.projects-section{
-    margin: 50px 120px;
-}
-.projects-section .projects-container{
+
+.projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 50px;
-    margin-top: 50px;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+    margin: 1.5rem auto;
 }
-.projects-section .projects-container .projects{
-    background-color: var(--violet);
-    border-radius: 15px;
-    padding: 40px;
-    font-size: 1.02rem;
-    font-weight: 300;
-    color: var(--bgcolor);
-    transition: background 0.5s, transform 0.5s;
+
+.projects-container .project-box{
+    min-height: 15rem;
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--purple);
+    overflow: hidden;
+    display: flex;
 }
-.projects-section .projects-container .projects:hover{
-    background-color: var(--purple);
-    transform: translateY(-10px);
+
+.project-box img{
+    width: 100%;
+    transition: 0.5s ease;
+    opacity: 0.7;
 }
-.projects-section .projects-container .projects > h2{
+
+.project-box:hover img{
+    transform: scale(1.1);
+}
+
+.project-box .project-layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.1), var(--bgcolor));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: 0.5s ease;
 }
-.projects-section .projects-container .projects > p{
-    margin: 20px 0;
-    text-align: justify;
+
+
+.project-box:hover .project-layer{
+    transform: translateY(0);
 }
-.projects-section .projects-container .projects a{
+
+.project-layer h4{
+    font-size: 1.25rem;
+}
+
+
+.project-layer p{
+    font-size: 1rem;
+    margin: 0.3rem 0 1rem;
+}
+
+.project-layer a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--purple);
     text-decoration: none;
-    color: var(--bgcolor);
+    font-size: 1rem;
 }
-.projects-section .projects-container .projects i{
-    font-size: 1.02rem;    
+
+.project-layer a i{
+    color: var(--purple);
+    margin-left: 0.5rem;
 }
-.projects-section .projects-container .projects a:hover{
-    text-decoration: underline;
-}
+
 
 /* contact section  */
-.contact-section{
-    margin: 50px 120px;
+
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.contact-leftSection{
-    flex-basis: 35%;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.contact-leftSection p{
-    margin-top: 30px;
-    color: var(--purple);
-    transition: transform 0.5s;
-    cursor: pointer;
-}
-.contact-leftSection p i{
-    margin-right: 15px;
-    font-size: 1.2rem;
-    color: var(--violet);
-    transition: transform 0.5s;
-    cursor: pointer;
-}
-
-.contact-leftSection p:hover {
-    transform: translateY(-5px);
-}
-.contact-icons {
-    margin-top: 30px;
-}
-.contact-icons a{
-    text-decoration: none;
-    font-size: 30px;
-    margin-right: 15px;
-    display: inline-block;
-    transition: transform 0.5s;
-}
-.contact-icons a i{
-    font-size: 1.2rem;
-    
-    color: var(--violet);
-}
-.contact-icons a:hover{
-    color: var(--violet);
-    transform: translateY(-5px);
-}
-.contact-rightSection{
-    flex-basis: 65%;
-}
-.contact-rightSection form{
+.contact form .input-box input, .contact form textarea{
     width: 100%;
-}
-form input, form textarea{
-    width: 100%;
+    padding: 1rem;
     border: 0;
-    outline: none;
-    background: var(--bgcolor1);
-    padding: 20px;
-    margin: 20px 0;
+    font-size: 1.25rem;
     color: var(--purple);
-    font-size: 1rem;
-    border-radius: 6px;
+    background: var(--bgcolor1);
+    border-radius: 0.8rem;
+    margin: 0.7rem 0;
+    outline: none;
     font-family: "Poppins", sans-serif;
 }
-form .btn2{
-    padding: 14px 60px;
-    width: 100%;
+
+.contact form .input-box input{
+    width: 49%;
+}
+
+.contact form textarea{
+    resize: none;
+}
+
+.btn2{
+    border: none;
 }
 
 /* footer section  */
@@ -295,7 +318,7 @@ footer div i{
 }
 /* responsive design  */
 
-nav .fa-solid{
+/* nav .fa-solid{
     display: none;
 }
 @media only screen and (max-width: 600px) {
@@ -388,4 +411,36 @@ nav .fa-solid{
     .contact-leftSection, .contact-rightSection{
         flex-basis: 100%;
     }
+} */
+
+
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
 }
+
+@media (max-width: 991px){
+    header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3%;
+    }
+    .techStackSection{
+        padding: 7rem;
+    }
+    .projects-section{
+        padding-bottom: 7rem;
+    }
+    .contact{
+        min-height: auto;
+    }
+    footer{
+        padding: 2rem 3%;
+    }
+}
+
+/* @media (max-width: 768px){
+    menu
+} */

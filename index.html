@@ -10,25 +10,16 @@
 </head>
 
 <body>
-  <header>
-    <nav>
-      <div class="leftSide">
-        <h1>Aheli<span class="purple">.portfolio</span></h1>
-      </div>
-      <div class="rightSide">
-        <ul id="menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#techStack">Tech Stack</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact Me</a></li>
-          <li>
-            <a href="images/AHELI NANDY_Resume.pdf" download class="btn">Download CV</a>
-          </li>
-          <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
-        </ul>
-        <i class="fa-solid fa-bars" onclick="openMenu()"></i>
-      </div>
+  <header class="header">
+    <h1>Aheli<span class="purple">.portfolio</span></h1>
+
+    <i class="fa-solid fa-bars" id="menu-icon"></i>
+    <nav class="navbar">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#techStack">Tech Stack</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
   <main>
@@ -37,6 +28,11 @@
       <div class="home-leftSection">
         Hi, My name is <span class="violet">Aheli Nandy</span>.
         <span id="element"> </span>
+        <div class="social-icons">
+          <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href=""><i class="fa-brands fa-github"></i></a>
+        </div>
+        <a href="" class="btn">My Resume</a>
       </div>
       <div class="home-rightSection">
         <img src="images/main.jpeg" alt="main.jpg" />
@@ -84,73 +80,54 @@
       <h1>Projects</h1>
       <div class="color-gray">Projects that I've completed.</div>
       <div class="projects-container">
-        <div class="projects">
-          <h2>Project 1</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatum nulla deserunt nisi similique totam saepe veniam? Harum
-            illo voluptatum ab.
-          </p>
-          <i class="fa-brands fa-github"></i>
-          <a href="https://github.com/Aheli001/Portfolio">View Code</a>
+        <div class="project-box">
+          <img src="images/projects/shopping-list.webp" alt="shopping list">
+          <div class="project-layer">
+            <h4>Shoppping List </h4>
+            <p>Effortlessly add items to your shopping list for organized shopping.</p>
+            <a href="https://shopping-list-two-nu.vercel.app/">Link <i class="fa-solid fa-paperclip"></i></a>
+            <a href="https://github.com/Aheli001/Shopping-List">Github Repo <i class="fa-brands fa-github"></i></a>
+          </div>
         </div>
-        <div class="projects">
-          <h2>Project 2</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatum nulla deserunt nisi similique totam saepe veniam? Harum
-            illo voluptatum ab.
-          </p>
-          <i class="fa-brands fa-github"></i>
-          <a href="https://github.com/Aheli001/Shopping-List">View Code</a>
+        <div class="project-box">
+          <img src="images/projects/netflix-clone.webp" alt="netflix clone">
+          <div class="project-layer">
+            <h4>Netflix Clone</h4>
+            <p>This project replicating Netflix's front-end design.</p>
+            <a href="https://github.com/Aheli001/Netflix-Clone">Github Repo <i class="fa-brands fa-github"></i></a>
+          </div>
         </div>
-        <div class="projects">
-          <h2>Project 3</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatum nulla deserunt nisi similique totam saepe veniam? Harum
-            illo voluptatum ab.
-          </p>
-          <i class="fa-brands fa-github"></i>
-          <a href="https://github.com/Aheli001/Netflix-Clone">View Code</a>
-        </div>
-        <div class="projects">
-          <h2>Project 4</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatum nulla deserunt nisi similique totam saepe veniam? Harum
-            illo voluptatum ab.
-          </p>
-          <i class="fa-brands fa-github"></i>
-          <a href="https://github.com/Aheli001/Weather-App">View Code</a>
+        <div class="project-box">
+          <img src="images/projects/weather-app.webp" alt="shopping list">
+          <div class="project-layer">
+            <h4>Weather Application</h4>
+            <p>Weather app providing accurate forecasts for any city worldwide, easily accessible.</p>
+            <a href="https://weather-app-roan-eta.vercel.app/">Link <i class="fa-solid fa-paperclip"></i></a>
+            <a href="https://github.com/Aheli001/Weather-App">Github Repo <i class="fa-brands fa-github"></i></a>
+          </div>
         </div>
       </div>
     </section>
     <hr />
     <!-- contact section  -->
-    <section class="contact-section" id="contact">
-      <div class="contact-leftSection">
-        <h1>Contact Me</h1>
-        <p><i class="fa-regular fa-envelope"></i>aheinandy01@gmail.com</p>
-        <p><i class="fa-solid fa-phone"></i>+91-8697657720</p>
-        <div class="contact-icons">
-          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+    <section class="contact" id="contact">
+      <h1>Contact Me</h1>
+      <form action="">
+        <div class="input-box">
+          <input type="text" placeholder="Full Name" required>
+          <input type="email" placeholder="Email Address" required>
         </div>
-      </div>
-      <div class="contact-rightSection">
-        <form>
-          <input type="text" name="Name" placeholder="Your full name" required />
-          <input type="email" name="email" placeholder="Your mail id" required />
-          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-          <button type="submit" class="btn btn2">Submit</button>
-        </form>
-      </div>
+        <div class="input-box">
+          <input type="number" placeholder="Mobile Number">
+          <input type="text" placeholder="Email Subject">
+        </div>
+        <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <input type="submit" value="Send Message" class="btn btn2">
+      </form>
     </section>
   </main>
   <footer>
-    <div>Copyright &copy; Aheli Nandy
-      <br />
-      Last updated 8th May 2024<i class="fa-regular fa-face-smile-beam"></i>
+    <div>Copyright &copy; 2024 by Aheli Nandy | All Rights Reserved.
     </div>
   </footer>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
