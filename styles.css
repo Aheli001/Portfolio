@@ -374,8 +374,9 @@ footer div i{
         flex-direction: column;
     }
     .home-leftSection{
-        font-size: 1.5rem;
+        font-size: 3rem;
         order: 2;
+        text-align: center;
     }
     .home-rightSection img{
         width: 53vw;
@@ -387,21 +388,28 @@ footer div i{
         width: 53vw;
     }
     h1{
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .color-gray {
         font-size: 1.7rem;
     }
     .about-rightSection p {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
     }
     .projects-container{
         grid-template-columns: 1fr;
     }
     .projects-container .project-box {
-        min-height: 30rem;
+        min-height: 17rem;
     }
     .contact form .input-box input{
         width: 100%;
+    }
+    .btn2{
+        width: 100%;
+    }
+    .btn {
+        width: 10rem;
+        padding: 1rem;
     }
 }
